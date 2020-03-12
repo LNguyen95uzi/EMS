@@ -198,7 +198,7 @@ function updateRoles() {
                     name: "roleId"
                 }
             ])
-            .then(ansewr => {
+            .then(answer => {
                 const query = `UPDATE employee SET role_id = "${answer.roleId}" WHERE id = ${answer.ogId}`
                 connection.query(query, function (err, res) {
                     if (err) throw err
