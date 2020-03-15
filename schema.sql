@@ -8,6 +8,7 @@ CREATE TABLE department (
     PRIMARY KEY (id)
 );
 
+DROP TABLE IF EXISTS role;
 CREATE TABLE role (
     id INT NOT NULL AUTO_INCREMENT,
     title VARCHAR(30) NOT NULL,
@@ -16,6 +17,7 @@ CREATE TABLE role (
     PRIMARY KEY (id)
 );
 
+DROP TABLE IF EXISTS employee;
 CREATE TABLE employee (
     id INT NOT NULL AUTO_INCREMENT, 
     first_name VARCHAR(30) NOT NULL, 
@@ -24,7 +26,3 @@ CREATE TABLE employee (
     manager_id INT(10) NULL,
     PRIMARY KEY (id)
 );
-
-SELECT * FROM department;
-SELECT * FROM role;
-SELECT * FROM employee;
